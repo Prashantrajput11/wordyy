@@ -6,7 +6,7 @@ let end = document.querySelector(".end-game");
 let gameContent = document.querySelector(".game-content");
 let restart = document.querySelector(".restart");
 // let highScoreEl = document.querySelector(".highscore");
-let time = 14;
+let time = 15;
 let score = 0;
 // let highScore = 5;
 
@@ -40,7 +40,7 @@ var demoTime = setInterval(timer, 1000);
 
 function timer() {
   time = time - 1;
-  timeEl.innerText = time;
+  timeEl.innerText = time + " " + "s";
   if (time === 0) {
     document.body.style.background = "red";
     stopTimer();
