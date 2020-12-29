@@ -23,7 +23,8 @@ userInput.focus();
 userScoreEl.innerText = score;
 // highScoreEl.innerText = highScore;
 userInput.addEventListener("input", function () {
-  if (userInput.value == word.innerText) {
+  if (userInput.value.toLowerCase() == word.innerText) {
+    // console.log(userInput.value.toLowerCase());
     getWords();
     userInput.value = "";
     score++;
