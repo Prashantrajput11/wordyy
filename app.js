@@ -5,6 +5,7 @@ let timeEl = document.querySelector(".time");
 let end = document.querySelector(".end-game");
 let gameContent = document.querySelector(".game-content");
 let restart = document.querySelector(".restart");
+let finalScore = document.querySelector(".end-score");
 // let highScoreEl = document.querySelector(".highscore");
 let time = 15;
 let score = 0;
@@ -28,7 +29,7 @@ userInput.addEventListener("input", function () {
     getWords();
     userInput.value = "";
     score++;
-    userScoreEl.innerText = score + 1;
+    userScoreEl.innerText = score;
     time = time + 2;
     timeEl.innerText = time;
   }
@@ -53,6 +54,7 @@ function stopTimer() {
 
   end.style.display = "block";
   gameContent.style.display = "none";
+  finalScore.innerText = score;
 }
 restart.addEventListener("click", function () {
   document.location.href = "";
